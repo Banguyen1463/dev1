@@ -36,25 +36,27 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Đăng nhập</h2>
-<<<<<<< HEAD
-        <label for="txtUserName">Tên đăng nhập:</label>
-        <input type="text" id="txtUserName" placeholder="Nhập tên đăng nhập">
-        <label for="txtpassword">Mật khẩu:</label>
-        <input type="lblpassword" id="txtpassword" placeholder="Nhập mật khẩu">
-        <button id="btnLogin">Đăng nhập</button>
-=======
         <label for="textboxusername">Tên tai khoan:</label>
         <input type="text" id="textboxusername" placeholder="Nhập tên đăng nhập">
         <label for="textboxmatkhau">mk:</label>
         <input type="lblpassword" id="textboxmatkhau" placeholder="Nhập mật khẩu">
         <button id="btnDangNhap">Dang nhap</button>
->>>>>>> 82a62eb9ce198e35e524813669a7af6f21c51501
 
 
         <p id="message" style="color: red;"></p>
     </div>
-    
+    <script>
+        document.getElementById("btnDangNhap").addEventListener("click", function() {
+            var username = document.getElementById("textboxusername").value;
+            var password = document.getElementById("textboxmatkhau").value;
+            
+            if (username === "admin" && password === "admin") {
+                window.location.href = "success.html"; // Chuyển đến trang đăng nhập thành công
+            } else {
+                document.getElementById("message").textContent = "Tên đăng nhập hoặc mật khẩu không đúng!";
+            }
+        });
+    </script>
     
 </body>
 </html>
